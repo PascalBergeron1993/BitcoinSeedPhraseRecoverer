@@ -1,0 +1,177 @@
+object Form1: TForm1
+  Left = 519
+  Height = 584
+  Top = 189
+  Width = 775
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Bitcoin Seed Phrase Recoverer'
+  ClientHeight = 584
+  ClientWidth = 775
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object GroupBox1: TGroupBox
+    Left = 7
+    Height = 54
+    Top = 84
+    Width = 761
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Left = 7
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 7
+    BorderSpacing.Bottom = 7
+    Caption = ' Incomplete seed phrase '
+    ClientHeight = 34
+    ClientWidth = 757
+    TabOrder = 0
+    object InputSeedWords: TEdit
+      Left = 7
+      Height = 23
+      Top = 4
+      Width = 743
+      Align = alTop
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 7
+    Height = 338
+    Top = 174
+    Width = 175
+    Align = alLeft
+    AutoSize = True
+    BorderSpacing.Left = 7
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 7
+    BorderSpacing.Bottom = 4
+    Caption = ' Possible last words '
+    ClientHeight = 318
+    ClientWidth = 171
+    Constraints.MinWidth = 175
+    TabOrder = 1
+    object LastWords: TMemo
+      Left = 7
+      Height = 307
+      Top = 4
+      Width = 157
+      Align = alClient
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object Go: TButton
+    Left = 7
+    Height = 25
+    Top = 145
+    Width = 761
+    Align = alTop
+    BorderSpacing.Left = 7
+    BorderSpacing.Right = 7
+    Caption = 'Check for possible last words'
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = GoClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object GroupBox4: TGroupBox
+    Left = 7
+    Height = 76
+    Top = 4
+    Width = 761
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Left = 7
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 7
+    Caption = ' What is this tool?'
+    ClientHeight = 56
+    ClientWidth = 757
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 7
+      Height = 45
+      Top = 4
+      Width = 743
+      Align = alTop
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
+      Caption = 'This tool allows you to enter an incomplete BIP39 seed phrase where the last word (and only the last word) is missing. Unlike the other words, the last word is not purely random; thus, this tool will determine which of the 2,048 words it can be so you can try them out in your wallet software.'
+      ParentColor = False
+      WordWrap = True
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 189
+    Height = 338
+    Top = 174
+    Width = 579
+    Align = alClient
+    AutoSize = True
+    BorderSpacing.Left = 7
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 7
+    BorderSpacing.Bottom = 4
+    Caption = ' Full seed phrases '
+    ClientHeight = 318
+    ClientWidth = 575
+    TabOrder = 4
+    object FullSeedPhrases: TMemo
+      Left = 7
+      Height = 307
+      Top = 4
+      Width = 561
+      Align = alClient
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 7
+    Height = 61
+    Top = 516
+    Width = 761
+    Align = alBottom
+    AutoSize = True
+    BorderSpacing.Left = 7
+    BorderSpacing.Right = 7
+    BorderSpacing.Bottom = 7
+    Caption = 'Need help?'
+    ClientHeight = 41
+    ClientWidth = 757
+    TabOrder = 5
+    object Label2: TLabel
+      Left = 7
+      Height = 30
+      Top = 4
+      Width = 743
+      Align = alTop
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 7
+      BorderSpacing.Bottom = 7
+      Caption = 'I offer a service where I help you recover your seed words. I charge a 15% fee on the recovered Bitcoins. You don''t have to pay me if I don''t succeed. You can write to me at contact@pascal-bergeron.com for more information.'
+      ParentColor = False
+      WordWrap = True
+    end
+  end
+end
