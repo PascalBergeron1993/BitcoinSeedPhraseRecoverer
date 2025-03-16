@@ -41,7 +41,7 @@ end;
 
 procedure TTestLastWordRecoverer.TryInvalidSeedWordsCount;
 begin
-  LastWordRecoverer.Recover('caught control anxiety tomato chimney legend steel unable virtual ski network lucky');
+  LastWordRecoverer.Recover('caught control anxiety tomato chimney');
 end;
 
 procedure TTestLastWordRecoverer.TryInvalidBIP39SeedWord;
