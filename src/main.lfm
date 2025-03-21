@@ -5,9 +5,10 @@ object Form1: TForm1
   Width = 775
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Bitcoin Seed Phrase Recoverer'
-  ClientHeight = 584
+  ClientHeight = 564
   ClientWidth = 775
+  Menu = MainMenu1
+  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '2.2.6.0'
   object GroupBox1: TGroupBox
@@ -40,7 +41,7 @@ object Form1: TForm1
   end
   object GroupBox2: TGroupBox
     Left = 7
-    Height = 338
+    Height = 318
     Top = 174
     Width = 175
     Align = alLeft
@@ -50,13 +51,13 @@ object Form1: TForm1
     BorderSpacing.Right = 7
     BorderSpacing.Bottom = 4
     Caption = ' Possible last words '
-    ClientHeight = 318
+    ClientHeight = 298
     ClientWidth = 171
     Constraints.MinWidth = 175
     TabOrder = 1
     object LastWords: TMemo
       Left = 7
-      Height = 307
+      Height = 287
       Top = 4
       Width = 157
       Align = alClient
@@ -117,7 +118,7 @@ object Form1: TForm1
   end
   object GroupBox3: TGroupBox
     Left = 189
-    Height = 338
+    Height = 318
     Top = 174
     Width = 579
     Align = alClient
@@ -127,12 +128,12 @@ object Form1: TForm1
     BorderSpacing.Right = 7
     BorderSpacing.Bottom = 4
     Caption = ' Full seed phrases '
-    ClientHeight = 318
+    ClientHeight = 298
     ClientWidth = 575
     TabOrder = 4
     object FullSeedPhrases: TMemo
       Left = 7
-      Height = 307
+      Height = 287
       Top = 4
       Width = 561
       Align = alClient
@@ -148,7 +149,7 @@ object Form1: TForm1
   object GroupBox5: TGroupBox
     Left = 7
     Height = 61
-    Top = 516
+    Top = 496
     Width = 761
     Align = alBottom
     AutoSize = True
@@ -172,6 +173,16 @@ object Form1: TForm1
       Caption = 'I offer a service where I help you recover your seed words. I charge a 15% fee on the recovered Bitcoins. You don''t have to pay me if I don''t succeed. You can write to me at contact@pascal-bergeron.com for more information.'
       ParentColor = False
       WordWrap = True
+    end
+  end
+  object MainMenu1: TMainMenu
+    object SellBitcoins: TMenuItem
+      Caption = 'Sell your Bitcoins'
+      OnClick = SellBitcoinsClick
+    end
+    object VisitWebsite: TMenuItem
+      Caption = 'Visit my website'
+      OnClick = VisitWebsiteClick
     end
   end
 end

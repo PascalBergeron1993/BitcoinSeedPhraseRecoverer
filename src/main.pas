@@ -11,7 +11,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  Core, SeedWordRecoverer, LCLType;
+  Core, SeedWordRecoverer, LCLType, Menus, LCLIntf;
 
 type
 
@@ -29,7 +29,13 @@ type
     Label2: TLabel;
     LastWords: TMemo;
     FullSeedPhrases: TMemo;
+    MainMenu1: TMainMenu;
+    SellBitcoins: TMenuItem;
+    VisitWebsite: TMenuItem;
+    procedure FormCreate(Sender: TObject);
     procedure GoClick(Sender: TObject);
+    procedure SellBitcoinsClick(Sender: TObject);
+    procedure VisitWebsiteClick(Sender: TObject);
   private
   public
   end;
@@ -76,6 +82,21 @@ begin
   LastWords.Lines.EndUpdate;
   FullSeedPhrases.Lines.EndUpdate;
   Go.Enabled := true;
+end;
+
+procedure TForm1.SellBitcoinsClick(Sender: TObject);
+begin
+  OpenURL('https://pascal-bergeron.com/en/posts/exchanges-cryptocurencies/');
+end;
+
+procedure TForm1.VisitWebsiteClick(Sender: TObject);
+begin
+  OpenURL('https://pascal-bergeron.com/en/posts/bitcoin-seed-phrase-recoverer/');
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Form1.Caption := 'Bitcoin Seed Phrase Recoverer ' + SOFTWARE_VERSION;
 end;
 
 end.

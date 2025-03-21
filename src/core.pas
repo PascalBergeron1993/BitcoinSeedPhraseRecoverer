@@ -12,6 +12,9 @@ var
 
   function ArrayToString(StringArray: TStringDynArray; const Delimiter: String): String;
 
+const
+  SOFTWARE_VERSION = '0.0.2';
+
 implementation
 
 function ArrayToString(StringArray: TStringDynArray; const Delimiter: String): String;
